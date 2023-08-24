@@ -4,11 +4,11 @@ abstract class Archetype {
   private _name: string;
   private _special = 0;
   private _cost = 0;
-  private static mageInstances = 0;
+  private static instances = 0;
 
   constructor(name: string) {
     this._name = name;
-    Archetype.mageInstances += 1;
+    Archetype.instances += 1;
   }
 
   get name(): string {

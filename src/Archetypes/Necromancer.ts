@@ -1,23 +1,23 @@
 import { EnergyType } from '../Energy';
 import Archetype from './Archetype';
 
-class Mage extends Archetype {
+class Necromancer extends Archetype {
   private _baseDamage: EnergyType;
-  private static mageInstances = 0;
+  private static necromancerInstances = 0;
 
   constructor(name: string) {
     super(name);
     this._baseDamage = 'mana';
-    Mage.mageInstances += 1;
-  }
+    Necromancer.necromancerInstances += 1;
+  }    
 
   static createdArchetypeInstances(): number {
-    return Mage.mageInstances;
-  } 
+    return Necromancer.necromancerInstances;
+  }
 
   get energyType(): EnergyType {
     return this._baseDamage;
   }
 }
 
-export default Mage;
+export default Necromancer;
